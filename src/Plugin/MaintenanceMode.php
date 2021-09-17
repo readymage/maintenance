@@ -47,7 +47,7 @@ class MaintenanceMode
         $flagFullPath = $this->flagDir->getAbsolutePath(CoreMaintenanceMode::FLAG_FILENAME);
 
         if (!$isOn && $this->flagDir->isExist(CoreMaintenanceMode::FLAG_FILENAME) && @is_link($flagFullPath)) {
-            $symlinkTarget = readlink($flagFullPath);
+            $symlinkTarget = @readlink($flagFullPath);
         }
 
         $proceed($isOn);
@@ -70,7 +70,7 @@ class MaintenanceMode
         $flagPath = $this->flagDir->getAbsolutePath(CoreMaintenanceMode::IP_FILENAME);
 
         if (empty($addresses) && $this->flagDir->isExist(CoreMaintenanceMode::IP_FILENAME) && @is_link($flagPath)) {
-            $symlinkTarget = readlink($flagPath);
+            $symlinkTarget = @readlink($flagPath);
 
         }
 
