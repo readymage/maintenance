@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+ * @category ReadyMage
+ * @package ReadyMage_Maintenance
+ * @author Ricards Rikmanis <ricards@scandiweb.com>
+ * @copyright Copyright (c) 2021 Scandiweb, Ltd (https://scandiweb.com)
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\MaintenanceMode">
+        <plugin name="readymageMaintenanceMode" type="ReadyMage\Maintenance\Plugin\MaintenanceMode" sortOrder="1" disabled="false" />
+    </type>
+</config>
